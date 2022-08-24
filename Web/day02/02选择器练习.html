@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #gy{
+            color: green;
+        }
+        .h{
+            color: yellow;
+        }
+        input[type='text'],body>p{
+            background-color: red;
+        }
+        body>div>div>p{
+            color: pink;
+        }
+        div div p{
+            background-color: yellow;
+        }
+
+        a:link{color:green}/*未访问*/
+        a:visited{color:red}/*访问过*/
+        a:hover{color: yellow}/*悬停*/
+        a:active{color:pink}/*点击/激活*/
+    </style>
+</head>
+<body>
+<ul>
+    <li>刘备</li>
+    <li id="gy">关羽</li>
+    <li class="h">张飞</li>
+</ul>
+<p>香蕉</p><p class="h">苹果</p>
+<input type="text">
+<input type="password">
+<div>
+    <p>p1</p>
+    <div><p>p2</p></div>
+    <div><div><p>p3</p></div></div>
+</div>
+<a href="http://www.qq.com">腾讯官网</a>
+</body>
+</html>
