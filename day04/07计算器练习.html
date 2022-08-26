@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="i1">
+<input type="text" id="i2">
+<input type="button" value="加" onclick="f1()">
+<input type="button" value="减" onclick="f2()">
+<input type="button" value="乘" onclick="f3()">
+<input type="button" value="除" onclick="f4()">
+<div>结果:</div>
+<script>
+    let x = document.querySelector("#i1");
+    let y = document.querySelector("#i2");
+    let d = document.querySelector("div");
+    function f1(){
+        if (isNaN(x.value)||isNaN(y.value)){
+            d.innerText = "输入错误!";
+            return;
+        }
+        d.innerText = "结果:"+(x.value*1+y.value*1);
+    }
+    function f2(){
+        if (isNaN(x.value)||isNaN(y.value)){
+            d.innerText = "输入错误!";
+            return;
+        }
+        d.innerText = "结果:"+(x.value-y.value);
+    }
+    function f3() {
+        if (isNaN(x.value)||isNaN(y.value)){
+            d.innerText = "输入错误!";
+            return;
+        }
+        d.innerText = "结果:" + x.value * y.value;
+    }
+    function f4(){
+        if (isNaN(x.value)||isNaN(y.value)){
+            d.innerText = "输入错误!";
+            return;
+        }
+        d.innerText = "结果:" + x.value / y.value;
+    }
+
+
+</script>
+</body>
+</html>
