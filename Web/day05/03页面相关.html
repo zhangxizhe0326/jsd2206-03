@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="button" value="按钮" onclick="f()">
+<script>
+  function f(){
+    //通过选择器得到文本框对象
+    let i = document.querySelector('input');
+    //创建h1
+    let h1 = document.createElement("h1");
+    //设置显示的内容和文本框的值
+    h1.innerText = i.value;
+    //把h1添加到body中
+    document.body.appendChild(h1);
+    //创建图片标签
+    let img = document.createElement("img");
+    img.src="../../Web/图片47.jpg";
+    document.body.appendChild(img);
+  }
+</script>
+</body>
+</html>

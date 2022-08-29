@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+  <caption>商品列表</caption>
+  <tr>
+    <td>商品标题</td>
+    <td>商品价格</td>
+    <td>商品销量</td>
+  </tr>
+</table>
+<script>
+  //实例化对象 空对象
+  let p1 = {};
+  //动态的给实例化对象添加属性和方法
+  p1.name="张三";
+  p1.age=20;
+  p1.run = function(){
+    console.log(this.name+":"+this.age)
+  }
+  //调用方法
+  p1.run()
+
+  //实例化自带属性和方法的对象
+  let p2 = {
+    name:"李四",
+    age :18,
+    run:function (){
+      console.log(this.name+":"+this.age)
+    }
+  }
+  p2.run()
+
+  //通过数组装对象订的方式封装 列表数据
+  let arr = [{title:"小米手机",price:4000,saleCont:200},{
+    title:"李宁篮球鞋",price:500,saleCont:1200},
+    {title:"统一方便面",price:5,saleCont:300}];
+  //遍历数组 把数据展示到页面中
+  for (let product of arr) {
+    //创建行
+    let tr = document.createElement("tr");
+    //创建列
+    let titleTd = document.createElement("td");
+    let priceTd = document.createElement("td");
+    let saleCountTd = document.createElement("td");
+    titleTd.innerText = product.title;
+    priceTd.innerText = product.price;
+    saleCountTd.innerText = product.saleCont;
+    //把三个td装进tr
+    tr.append(titleTd,priceTd,saleCountTd);
+    //把tr装进table
+    let table = document.querySelector("table");
+    table.append(tr);
+  }
+
+    /*for(let i = 0;i<arr.length;i++){
+        let tr = document.createElement("tr");
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        td1.innerText = arr[i].title;
+        td2.innerText = arr[i].price;
+        td3.innerText = arr[i].saleCont;
+        tr.append(td1,td2,td3);
+        document.querySelector("table").append(tr);
+    }*/
+</script>
+</body>
+</html>

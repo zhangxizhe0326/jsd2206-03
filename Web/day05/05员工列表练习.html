@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="员工姓名" id="i1">
+<input type="text" placeholder="员工工资" id="i2">
+<input type="text" placeholder="员工工作" id="i3">
+<input type="button" value="添加" onclick="f()">
+<table border="1">
+  <caption>员工列表</caption>
+  <tr>
+    <th>姓名</th>
+    <th>工资</th>
+    <th>工作</th>
+  </tr>
+</table>
+<script>
+  /*//根据输入框输入的内容创建tr,td显示到页面上
+    function f() {
+        //得到输入框的值
+        let i1 = document.getElementById("i1");
+        let i2 = document.getElementById("i2");
+        let i3 = document.getElementById("i3");
+        //创建tr
+        let tr = document.createElement("tr");
+        //创建td
+        let td1 = document.createElement("td");
+        let td2 = document.createElement("td");
+        let td3 = document.createElement("td");
+        //设置td的内容
+        td1.innerHTML = i1.value;
+        td2.innerHTML = i2.value;
+        td3.innerHTML = i3.value;
+        //将td添加到tr中
+        tr.append(td1);
+        tr.append(td2);
+        tr.append(td3);
+        //将tr添加到table中
+        document.querySelector("table").append(tr);
+    }*/
+    //根据输入框输入的内容创建tr,td显示到页面上
+  function f(){
+      let table = document.querySelector("table");
+      let tr = document.createElement("tr");
+      let td1 = document.createElement("td");
+      let td2 = document.createElement("td");
+      let td3 = document.createElement("td");
+      td1.innerText = i1.value;
+      td2.innerText = i2.value;
+      td3.innerText = i3.value;
+      tr.append(td1,td2,td3);
+      table.append(tr);
+  }
+</script>
+</body>
+</html>

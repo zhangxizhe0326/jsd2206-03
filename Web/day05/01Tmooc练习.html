@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-
-    </style>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      font-family: Microsoft YaHei, Helvetica Neue, Helvetica, STHeiTi, Arial, sans-serif;
+      font-size: 12px;
+      background-color: #666;
+    }
+    body>div{
+      width: 1200px;
+      margin: 0 auto;/*居中*/
+    }
+    body>div>div{
+      width: 220px;/* 1200/5=240 每个240的空间 220需要加上左右外边距 达到240 5个相加 1200 */
+      margin: 0 10px;/* 设置每个div之间的间距 */
+      float: left;
+      border-radius: 5px;
+      overflow: hidden;/* 超出部分隐藏 */
+      background-color: #ffffff;
+    }
+    body>div>div:hover{
+      position: relative;
+      bottom: 5px;
+      /* 元素阴影:x偏移值 y偏移值 浓度 范围 颜色 */
+      box-shadow: 0 0 15px 8px #555;
+    }
+    img{
+      width: 100%;/* 上级元素的宽度 */
+    }
+    .b_div{
+      padding: 15px;
+    }
+    .b_div>a{
+      font-size: 14px;
+      color: #333;
+      text-decoration: none;
+      display: block;
+      height: 40px;
+      margin-bottom: 12px;
+    }
+    .free_span{
+      color: #4f8dfe;
+    }
+    .count_span{
+      float: right;
+      color: #888;
+    }
+  </style>
 </head>
 <body>
 <div>
