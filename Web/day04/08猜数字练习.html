@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="请输入1-100之间的整数">
+<input type="button" value="猜一猜" onclick="f()">
+<div>猜</div>
+<script>
+  //得到1-100随机整数
+  let x = parseInt(Math.random()*100)+1;
+  let d = document.querySelector("input");
+  let dd = document.querySelector("div");
+  let cont = 0;
+  function f(){
+    cont++
+    if (d.value > x){
+      dd.innerText = "猜大了!"
+    }else if(d.value < x){
+      dd.innerText = "猜小了!"
+    }else {
+      dd.innerText = "恭喜你"+cont+"猜对了!"
+    }
+  }
+
+</script>
+</body>
+</html>
